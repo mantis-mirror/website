@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EMAIL, PHONE_NUMBER } from "../../constants";
 
 @Component({
   selector: 'app-contact',
@@ -9,4 +10,6 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  protected readonly PHONE_NUMBER = PHONE_NUMBER;
+  protected readonly EMAIL = EMAIL;
 }

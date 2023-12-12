@@ -2,7 +2,7 @@
 @use '../../../scss/components/mixins' as mix;
 
 .menu {
-  @include mix.gradient;
+  @include mix.yellowGradient;
 
   li {
     padding: 0 0.7rem;

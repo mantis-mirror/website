@@ -5,6 +5,10 @@
     background: linear-gradient(to right, rgba(v.$primary, 0.95), rgba(v.$secondary, 0.95));
 }
 
+@mixin yellowGradient {
+  background: linear-gradient(to right, rgba(#99cc66, 0.95), rgba(v.$secondary, 0.95));
+}
+
 // ABSOLUTE CENTER
 @mixin absoluteCenter {
     position: absolute;

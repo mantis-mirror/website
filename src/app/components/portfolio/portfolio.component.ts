@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { afterRender, Component } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  constructor() {
+    afterRender(() => {
+      // Focus the first input element in this component.
+      (window as any).GLightbox({
+        'selector': 'glightbox-dm'
+      });
+    });
+  }
 }

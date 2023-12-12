@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { afterRender, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -21,4 +21,10 @@ import { BackToTopComponent } from "./components/back-to-top/back-to-top.compone
 })
 export class AppComponent {
   title = 'angular-bootstrap-starter';
+
+  constructor() {
+    afterRender(() => {
+      (window as any).GLightbox({});
+    });
+  }
 }
