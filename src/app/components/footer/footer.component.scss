@@ -23,7 +23,6 @@
     a {
       font-size: 0.8rem;
       font-weight: 600;
-      color: v.$gray-600;
       text-decoration: none;
     }
 
@@ -38,6 +37,7 @@
 
     p {
       margin-bottom: 0;
+      color: v.$gray-600;
     }
   }
 
