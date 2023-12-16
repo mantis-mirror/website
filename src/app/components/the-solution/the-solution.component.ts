@@ -1,13 +1,13 @@
 import { afterRender, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio',
+  selector: 'app-the-solution',
   standalone: true,
   imports: [],
-  templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  templateUrl: './the-solution.component.html',
+  styleUrl: './the-solution.component.scss'
 })
-export class PortfolioComponent {
+export class TheSolutionComponent {
   constructor() {
     afterRender(() => {
       // Focus the first input element in this component.

@@ -1,9 +1,7 @@
 @use '../../../scss/variables' as v;
 @use '../../../scss/components/mixins' as *;
 
-.inty i:before {
-  margin-left: 12px;
-}
+
 
 .intro-section {
   @include gradient;
