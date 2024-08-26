@@ -1,0 +1,28 @@
+<ng-container *ngIf="a(); else showNot">
+  <app-navbar></app-navbar>
+
+  <app-intro></app-intro>
+
+  <app-the-problem></app-the-problem>
+
+  <app-the-solution></app-the-solution>
+
+  <app-testimonials></app-testimonials>
+
+  <app-faq></app-faq>
+
+  <app-contact></app-contact>
+
+  <app-footer></app-footer>
+
+  <app-back-to-top></app-back-to-top>
+</ng-container>
+
+<ng-template #showNot>
+  <app-contact></app-contact>
+
+  <app-footer></app-footer>
+
+  <app-back-to-top></app-back-to-top>
+</ng-template>
+
