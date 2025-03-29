@@ -12,6 +12,7 @@ import {AuthService} from "../../state/auth.service";
 import {CommonModule} from "@angular/common";
 import {MatDialog} from "@angular/material/dialog";
 import {DialogComponent} from "../dialog/dialog.component";
+import {SubscribeFormComponent} from "../subscribe-form/subscribe-form.component";
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ import {DialogComponent} from "../dialog/dialog.component";
     NavbarComponent,
     TestimonialsComponent,
     TheProblemComponent,
-    TheSolutionComponent
+    TheSolutionComponent,
+    SubscribeFormComponent
   ],
   templateUrl: './root.component.html',
   styleUrl: './root.component.scss'
