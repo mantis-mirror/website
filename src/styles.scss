@@ -10,3 +10,6 @@
 @use 'scss/components/buttons';
 @use 'scss/components/mixins';
 @use 'scss/components/typography';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,15 @@
+<form (ngSubmit)="submit()">
+  <h2 mat-dialog-title>Please enter the passcode.</h2>
+  <mat-dialog-content>
+    <p>If you do not have one, please contact Mike Kelly.</p>
+    <mat-form-field class="w-100">
+      <mat-label>Passcode</mat-label>
+      <input matInput [formControl]="animal" />
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="test123" cdkFocusInitial>Ok</button>
+  </mat-dialog-actions>
+</form>
+

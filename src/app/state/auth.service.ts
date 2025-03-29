@@ -4,7 +4,7 @@ import {Injectable, signal} from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  i = signal(false);
+  i = signal(true);
 
   constructor() { }
 }
