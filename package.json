@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:angular-bootstrap-starter": "node dist/angular-bootstrap-starter/server/server.mjs",
     "test1": "ng build --base-href=https://mantismirror.com/ --ssr=false",
-    "test2": "ng build --base-href=https://mantismirror.com/ --ssr=false npx angular-cli-ghpages --dir=dist/angular-bootstrap-starter/browser"
+    "test2": "npx angular-cli-ghpages --dir=dist/angular-bootstrap-starter/browser"
   },
   "private": true,
   "dependencies": {
