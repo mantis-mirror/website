@@ -1,6 +1,11 @@
 @use '../../../scss/variables' as v;
 @use '../../../scss/components/mixins' as *;
 
+.bushtukahLogo {
+  height: 100px;
+  margin-top: 15px;
+  display: block;
+}
 
 .black-box {
   padding: 1rem;
