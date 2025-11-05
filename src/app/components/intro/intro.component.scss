@@ -15,6 +15,13 @@
   border: 1px solid #333; /* Optional: slight border for contrast */
 }
 
+.helmet-fit-btn {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .intro-section {
   @include gradient;
   padding: 10rem 0 0 0;
