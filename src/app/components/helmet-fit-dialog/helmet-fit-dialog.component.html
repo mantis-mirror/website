@@ -5,13 +5,12 @@
     So, the short answer here is: most likely, yes (as we've looked at many helmets).
   </p>
 
-  <figure class="fit-image">
-    <img src="assets/images/mantis-fit-helmet-1.png"
-         alt="Three helmets showing how the Mantis Mirror base mount and wedges align with different shell profiles" />
-  </figure>
-  <figure class="fit-image">
-    <img src="assets/images/mantis-fit-helmet-2.png"
-         alt="Mantis Mirror system base mount and adapter wedges for different helmet curvatures" />
+  <figure class="fit-image" *ngFor="let image of helmetFitImages">
+    <img [src]="image.src"
+         [alt]="image.alt"
+         loading="lazy"
+         decoding="async" />
+    <figcaption>{{ image.caption }}</figcaption>
   </figure>
 
   <p class="important-note">
