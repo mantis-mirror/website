@@ -1,0 +1,53 @@
+name: PR Preview → website-staging
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install
+        run: npm ci
+
+      # Build Angular site FOR THE PR PATH:
+      # https://mantis-mirror.github.io/website-staging/pr-preview/pr-<PR#>/
+      - name: Build (Angular)
+        run: |
+          npx ng build --configuration production \
+            --base-href "/website-staging/pr-preview/pr-${{ github.event.number }}/"
+
+      # Deploy preview for open PRs
+      - name: Deploy PR Preview
+        if: github.event.action != 'closed'
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          # Angular emits to this folder in your repo
+          # (see README and angular defaults)
+          source-dir: dist/angular-bootstrap-starter/browser
+          # Push to the STAGING repository:
+          deploy-repository: mantis-mirror/website-staging
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          token: ${{ secrets.STAGING_PAGES_TOKEN }}
+
+      # Clean up when PR closes
+      - name: Remove PR Preview on close
+        if: github.event.action == 'closed'
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          deploy-repository: mantis-mirror/website-staging
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          action: delete
+          token: ${{ secrets.STAGING_PAGES_TOKEN }}
