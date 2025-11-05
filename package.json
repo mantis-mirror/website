@@ -8,8 +8,12 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular-bootstrap-starter": "node dist/angular-bootstrap-starter/server/server.mjs",
-    "test1": "ng build --base-href=https://mantismirror.com/ --ssr=false",
-    "test2": "npx angular-cli-ghpages --dir=dist/angular-bootstrap-starter/browser"
+    "build:prod": "node scripts/build-with-base-href.mjs production",
+    "build:staging": "node scripts/build-with-base-href.mjs staging",
+    "publish:prod": "npx angular-cli-ghpages --dir=dist/angular-bootstrap-starter/browser --branch=gh-pages",
+    "publish:staging": "npx angular-cli-ghpages --dir=dist/angular-bootstrap-starter/browser --branch=gh-pages-staging",
+    "deploy:prod": "npm run build:prod && npm run publish:prod",
+    "deploy:staging": "npm run build:staging && npm run publish:staging"
   },
   "private": true,
   "dependencies": {
