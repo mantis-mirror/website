@@ -1,128 +1,233 @@
-@use '../../../scss/variables' as v;
-@use '../../../scss/components/mixins' as *;
+@use 'sass:color';
+@use '../../../scss/_variables' as v;
 
-.bushtukahLogo {
-  height: 100px;
-  margin-top: 15px;
-  display: block;
+.intro-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4.5rem, 9vw, 8rem) 0 0;
+  background: linear-gradient(135deg, rgba(11, 24, 19, 0.95), rgba(7, 12, 19, 0.98));
+
+  svg {
+    display: block;
+  }
+}
+
+.intro-surface {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.32;
+    mix-blend-mode: screen;
+
+    &--one {
+      width: 24rem;
+      height: 24rem;
+      top: -7rem;
+      left: -6rem;
+      background: radial-gradient(circle, rgba(v.$secondary, 0.55) 0%, transparent 70%);
+    }
+
+    &--two {
+      width: 16rem;
+      height: 16rem;
+      bottom: -6rem;
+      right: 4rem;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.26) 0%, transparent 70%);
+    }
+  }
+}
+
+.intro-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.intros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+.headline-stack {
+  max-width: 32rem;
+
+  .display-2--intro {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: linear-gradient(
+      92deg,
+      v.$secondary 0%,
+      color.scale(v.$secondary, $lightness: 18%) 45%,
+      #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .display-2--description {
+    display: block;
+    margin-top: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    color: rgba(255, 255, 255, 0.84);
+  }
+}
+
+.testimonial-card {
+  max-width: 36rem;
+  padding: 0.2rem;
+  border-radius: 1.6rem;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0));
 }
 
 .black-box {
-  padding: 1rem;
-  background-color: #000000; /* Pure black */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  border: 1px solid #333; /* Optional: slight border for contrast */
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: rgba(6, 10, 9, 0.88);
+  border-radius: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 1.3rem 3rem rgba(0, 0, 0, 0.45);
+
+  i {
+    display: block;
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  strong {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
 }
 
-.helmet-fit-btn {
-  margin-top: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+.cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.15rem, 2.5vw, 1.75rem);
+  max-width: 34rem;
+}
+
+.partner-highlight {
+  padding: 0.85rem 1.25rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+
+  strong {
+    color: #ffffff;
+    font-weight: 600;
+  }
 }
 
 .purchase-cta {
-  margin: 1.5rem 0 1rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 1.5rem;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
-  max-width: 28rem;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 1.65rem;
+  background: linear-gradient(135deg, rgba(10, 22, 18, 0.84), rgba(10, 15, 20, 0.84));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.35);
 }
 
 .buy-now-btn {
-  font-size: 1.1rem;
+  position: relative;
+  font-size: clamp(1.05rem, 2vw, 1.15rem);
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: v.$secondary;
+  padding: 0.9rem 2.6rem 0.9rem 2.1rem;
+  background: linear-gradient(110deg, color.scale(v.$secondary, $lightness: 12%) 0%, v.$secondary 60%, #ff9d73 100%);
   color: v.$primary;
   border: none;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 1.3rem 3rem rgba(0, 0, 0, 0.35);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  i {
+    font-size: 1.2em;
+  }
 
   &:hover,
   &:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 1.7rem 4rem rgba(0, 0, 0, 0.38);
     color: v.$primary;
   }
 }
 
 .shipping-note {
-  margin: 0.75rem 0 0;
+  margin: 1.1rem 0 0;
   font-size: 1rem;
   font-weight: 600;
-  color: v.$white;
+  color: rgba(255, 255, 255, 0.88);
 
   .discount-code {
     display: inline-block;
-    padding: 0.15rem 0.5rem;
-    margin-left: 0.4rem;
+    padding: 0.25rem 0.6rem;
+    margin-left: 0.5rem;
     border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.35);
-    color: v.$secondary;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
 
   &__detail {
+    margin-top: 0.7rem;
     font-size: 0.95rem;
     font-weight: 500;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.72);
   }
 }
 
-.intro-section {
-  @include gradient;
-  padding: 10rem 0 0 0;
-  width: 100%;
-  //height: 100%;
+.video-panel {
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(13, 22, 19, 0.72);
+  border-radius: 2.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1.9rem 4rem rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(14px);
 }
 
-.intros {
+.video-box {
+  position: relative;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 
+  img {
+    display: block;
+    width: 100%;
+    border-radius: inherit;
+  }
+}
 
-  .video-box {
-    position: relative;
+.video-box a {
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-
-    a {
-      // @include absoluteCenter;
-
-      span {
-
-
-        i {
-
-          font-size: 6rem;
-          color: v.$secondary;
-
-        }
-      }
+    i {
+      font-size: clamp(4.5rem, 8vw, 6rem);
+      color: v.$secondary;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
   }
 }
 
 .border-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6rem;
-  height: 6rem;
-  border: 0.55rem solid v.$white;
-  border-radius: 50%;
-  animation: pulse-border 1.5s linear infinite;
-
-  &--border-1 {
-    animation-delay: 1s;
-  }
-  &--border-2 {
-    animation-delay: 1.5s;
-  }
+  width: clamp(5rem, 9vw, 6.5rem);
+  height: clamp(5rem, 9vw, 6.5rem);
+  border: 0.55rem solid rgba(255, 255, 255, 0.8);
 }
+
