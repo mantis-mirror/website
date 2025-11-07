@@ -1,83 +1,99 @@
 <section id="home" class="intro-section">
-  <div class="container">
-    <div class="row align-items-center text-white">
-      <!-- START THE CONTENT FOR THE INTRO  -->
-      <div class="col-md-6 intros mb-4 sm-mb-0 text-start">
-        <h1 class="display-2">
-          <span class="display-2--intro">{{ APP_NAME }}</span>
-          <span class="display-2--description lh-base">
-            Increasing Bicycle Safety and Enjoyment, by helping Eliminate Rear Blind Spots.
-          </span>
-        </h1>
-        <div>
-          <div class="black-box">
-            <i class="display-2--description mt-0">“Bike mirrors haven’t evolved much — as they still use a single mirror, which limits visibility. The Mantis Mirror System takes a different approach with its patented dual-mirror design that gives riders a rear view in various riding positions once set — even in an aero tuck — without needing to readjust. Greater safety and better riding efficiency. Worth checking out.”
-              <strong class="d-block">— Simon Whitfield, Olympic Gold Medalist, Triathlon</strong></i>
-          </div>
-          <div class="pt-2">
-            <p class="display-2--description d-block">
-              <img src="assets/images/kickstarter-logo.png" alt="video illutration" class="img-fluid me-1" width="50">
-<!--              <img src="assets/images/kickstarter-funded-badge.png" alt="video illutration" class="img-fluid me-1" width="150">-->
-              <strong>The Mantis™ Mirror System has been fully funded on KickStarter!</strong>
-              </p>
-            <p class="display-2--description d-block mt-1">Subscribe to our mailing list!</p>
-            <div class="purchase-cta">
-              <a
-                href="https://square.link/u/UHE8DcKB"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="rounded-pill btn-rounded text-decoration-none d-inline buy-now-btn"
-              >
-                Buy Now
-                <span><i class="fas fa-arrow-right"></i></span>
-              </a>
-              <p class="shipping-note">
-                <strong>Free Shipping</strong> &amp; Introductory Discount
-                <span class="discount-code">“WELCOMEMANTIS”</span>
-              </p>
-              <p class="shipping-note shipping-note__detail">
-                Shipping will only be done within Canada to Canadian residents at this time (if you are outside of Canada,
-                please subscribe for updates).
-              </p>
-            </div>
-            <a href="#subscribe" type="button" class="rounded-pill btn-rounded text-decoration-none d-inline">Subscribe Now
-              <span><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <button
-              type="button"
-              class="rounded-pill btn-rounded text-decoration-none d-inline helmet-fit-btn"
-              (click)="openHelmetFitDialog()"
-            >
-              Will the Mantis Mirror Fit My Helmet
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button>
-            <img class="img-fluid me-1 bushtukahLogo" src="assets/images/bushtukah-logo.jpg" alt="video illutration">
-            <p>Founding Supporter</p>
-          </div>
+  <div class="intro-section__halo intro-section__halo--left"></div>
+  <div class="intro-section__halo intro-section__halo--right"></div>
+  <div class="container intro-shell">
+    <div class="intro-copy text-white">
+      <p class="intro-eyebrow">Patented dual-mirror innovation</p>
+      <h1 class="intro-title">
+        <span class="intro-title__product">{{ APP_NAME }}</span>
+        <span class="intro-title__promise">Ride with a panoramic rear view — no matter your position.</span>
+      </h1>
+      <p class="intro-lede">
+        Increasing bicycle safety and enjoyment by eliminating rear blind spots so you can focus on the road ahead — and behind —
+        with complete confidence.
+      </p>
 
-        </div>
+      <figure class="quote-card" aria-label="Quote from Simon Whitfield about the Mantis Mirror System">
+        <blockquote>
+          “Bike mirrors haven’t evolved much — as they still use a single mirror, which limits visibility. The Mantis Mirror System
+          takes a different approach with its patented dual-mirror design that gives riders a rear view in various riding positions
+          once set — even in an aero tuck — without needing to readjust. Greater safety and better riding efficiency. Worth checking
+          out.”
+        </blockquote>
+        <figcaption>— Simon Whitfield, Olympic Gold Medalist, Triathlon</figcaption>
+      </figure>
 
+      <div class="intro-badges">
+        <img src="assets/images/kickstarter-logo.png" alt="Kickstarter logo" class="intro-badge" width="88" height="24" />
+        <span class="intro-badge intro-badge--text">The Mantis™ Mirror System has been fully funded on KickStarter!</span>
       </div>
-      <!-- START THE CONTENT FOR THE VIDEO -->
-      <div class="col-md-6 intros text-end">
-        <div class="video-box">
-          <img src="assets/images/mantis-mirror-top-bottom-view.jpg" alt="video illutration" class="img-fluid">
-          <a href="https://vimeo.com/1085483480/0b943a06f3"
-             class="glightbox position-absolute top-50 start-50 translate-middle"
-             data-type="video"
-             data-effect="fade"
-             data-source="youtube"
-             data-width="1248"
-             data-autoPlayVideos="true">
-            <span>
-              <i class="fas fa-play-circle"></i>
-            </span>
-            <span class="border-animation border-animation--border-1"></span>
-            <span class="border-animation border-animation--border-2"></span>
+      <p class="intro-subtext">Subscribe to our mailing list for availability beyond Canada.</p>
+
+      <div class="cta-group">
+        <div class="purchase-cta">
+          <a
+            href="https://square.link/u/UHE8DcKB"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-pill btn-rounded text-decoration-none d-inline buy-now-btn"
+          >
+            Buy Now
+            <span><i class="fas fa-arrow-right"></i></span>
           </a>
+          <p class="shipping-note">
+            <strong>Free Shipping</strong> &amp; Introductory Discount
+            <span class="discount-code">“WELCOMEMANTIS”</span>
+          </p>
+          <p class="shipping-note shipping-note__detail">
+            Shipping will only be done within Canada to Canadian residents at this time (if you are outside of Canada, please
+            subscribe for updates).
+          </p>
         </div>
+        <div class="cta-stack">
+          <a href="#subscribe" class="rounded-pill btn-rounded text-decoration-none intro-secondary-link">
+            Subscribe Now
+            <span><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <button type="button" class="rounded-pill btn-rounded intro-secondary-link" (click)="openHelmetFitDialog()">
+            Will the Mantis Mirror Fit My Helmet
+            <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="intro-supporter">
+        <img class="intro-supporter__logo" src="assets/images/bushtukah-logo.jpg" alt="Bushtukah logo" />
+        <p class="intro-supporter__label">Founding Supporter</p>
       </div>
     </div>
+
+    <div class="intro-visual">
+      <div class="video-box">
+        <img src="assets/images/mantis-mirror-top-bottom-view.jpg" alt="Mantis mirror top and bottom view" class="intro-visual__image" />
+        <a
+          href="https://vimeo.com/1085483480/0b943a06f3"
+          class="glightbox position-absolute top-50 start-50 translate-middle"
+          data-type="video"
+          data-effect="fade"
+          data-source="youtube"
+          data-width="1248"
+          data-autoPlayVideos="true"
+        >
+          <span>
+            <i class="fas fa-play-circle"></i>
+          </span>
+          <span class="border-animation border-animation--border-1"></span>
+          <span class="border-animation border-animation--border-2"></span>
+        </a>
+      </div>
+      <div class="intro-visual__shadow" aria-hidden="true"></div>
+    </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" role="presentation" focusable="false" aria-hidden="true">
+    <path
+      fill="#ffffff"
+      fill-opacity="1"
+      d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    ></path>
+  </svg>
 </section>
