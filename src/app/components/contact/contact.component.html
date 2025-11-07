@@ -1,23 +1,41 @@
 <section id="contact" class="get-started">
   <button mat-button class="loginButton" aria-hidden="false" (click)="hello()" [hidden]="not()">Enter Passcode</button>
   <div class="container">
-    <div class="row text-center">
-      <h1 class="display-3 fw-bold text-capitalize">Contact Us</h1>
-      <div class="heading-line"></div>
-      <p class="lh-lg">
-        Get in Touch
-      </p>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <span class="eyebrow text-uppercase">We are here for you</span>
+        <h1 class="display-3 fw-bold text-capitalize">Contact Us</h1>
+        <div class="heading-line heading-line--accent mx-auto"></div>
+        <p class="lead text-muted mt-3">Get personalised support, sizing guidance, or partnership information straight from the Mantis™ team.</p>
+      </div>
     </div>
 
     <!-- START THE CTA CONTENT  -->
-    <div class="row text-white">
-      <div class="col-12 gradient shadow p-3">
-        <div class="cta-info w-100">
-          <h4 class="display-4 fw-bold">Have a question related to the Mantis™	Mirror System?</h4>
-          <p class="pt-2 lh-lg">
-            Contact us by email at
-            <a href="mailto:support@mantismirror.com" class="title text-white">{{ EMAIL }}</a>
+    <div class="contact-shell row g-4 align-items-center text-white mt-4">
+      <div class="col-lg-8">
+        <div class="cta-info">
+          <h4 class="cta-info__title">Have a question related to the Mantis™ Mirror System?</h4>
+          <p class="cta-info__body">
+            Email us anytime at
+            <a href="mailto:support@mantismirror.com" class="cta-info__link">{{ EMAIL }}</a>
+            and we will respond within one business day.
           </p>
+          <ul class="cta-info__list">
+            <li>Guided helmet fit checks and mirror setup advice.</li>
+            <li>Bulk orders and retail partnership enquiries.</li>
+            <li>Support for riders outside Canada via our waitlist.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="contact-card">
+          <h5>Prefer a quick overview?</h5>
+          <p>Request our spec sheet to share with teammates and club members.</p>
+          <a href="mailto:support@mantismirror.com?subject=Mantis%20Mirror%20Spec%20Sheet" class="contact-card__cta">
+            <span class="contact-card__icon"><i class="fas fa-file-download"></i></span>
+            Request the PDF
+          </a>
+          <small class="d-block mt-3">No spam—just the essentials to get you rolling.</small>
         </div>
       </div>
     </div>

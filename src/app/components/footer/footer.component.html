@@ -1,80 +1,59 @@
 <footer class="footer">
-  <div class="container py-3">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="contact-box justify-content-md-start mb-4">
-          <i class="fa fa-3x fa-envelope"></i>
-          <div class="info">
-            <a href="mailto:support@mantismirror.com" class="title">{{ EMAIL }}</a>
-            <p>Inquire Today</p>
-          </div>
+  <div class="footer__glow"></div>
+  <div class="container py-5">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-4">
+        <div class="footer__brand">
+          <img src="assets/images/logo-sm.png" alt="Mantis Mirror logo" class="footer__logo mb-3">
+          <h5 class="text-uppercase">{{ APP_NAME }}</h5>
+          <p class="footer__tagline">Increasing Bicycle Safety and Enjoyment by eliminating rear blind spots.</p>
+          <a href="mailto:support@mantismirror.com" class="footer__email">
+            <span class="footer__email-icon"><i class="fas fa-envelope"></i></span>
+            {{ EMAIL }}
+          </a>
         </div>
       </div>
-
-      <div class="col-md-6 text-md-end">
-        <div class="contact-box justify-content-md-end">
-<!--          <i class="fa fa-3x fa-phone"></i>-->
-<!--          <div class="info">-->
-<!--            <a href="tel:16138301300" class="title">{{ PHONE_NUMBER }}</a>-->
-<!--            <p class="text-start">Mon-Fri 9am-6pm</p>-->
-<!--          </div>-->
-        </div>
-
-      </div>
-    </div>
-    <!-- CONTENT FOR THE MOBILE NUMBER  -->
-
-  </div>
-
-  <!-- START THE SOCIAL MEDIA CONTENT  -->
-  <div class="footer-sm" style="min-height: 30px; background-color: #212121;">
-    <div class="container d-none">
-      <div class="row py-4 text-center text-white">
-        <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-          connect with us on social media
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-5">
-    <div class="container text-center text-sm-start text-white justify-content-center mt-3 pb-3">
-      <div class="row">
-        <div class="col-12 col-sm-8 mb-3 mx-auto">
-          <h5 class="text-capitalize fw-bold">{{ APP_NAME }}</h5>
-          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-          <p class="lh-lg">
-            Increasing Bicycle Safety and Enjoyment, by helping Eliminate Rear Blind Spots. The Mantis™ Mirror System has been fully funded on Kickstarter.</p>
-        </div>
-        <div class="col-12 col-sm-4 mb-4 mx-auto">
-          <h5 class="text-capitalize fw-bold">useful links</h5>
-          <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-          <ul class="list-inline campany-list">
-            <li><a href="https://doi.org/10.1101/2022.03.01.481993" target="_blank">Rider Balance While Shoulder Checking</a></li>
-            <li><a href="https://ggwash.org/view/34841/8-takeaways-from-the-bike-leagues-study-of-cyclist-fatalities" target="_blank">Cycling Fatalities</a></li>
-            <li><a href="https://www.insurancebusinessmag.com/ca/news/breaking-news/aviva-canada-distracted-drivingrelated-accidents-on-the-rise-100634.aspx" target="_blank">Distracted Driving</a></li>
-            <li><a href="https://www.sharetheroad.ca/files/Cycling_Safety_Overview___2012_12_05.pdf" target="_blank">Overview Of Cycling Statistics</a></li>
+      <div class="col-lg-4 col-md-6">
+        <div class="footer__panel">
+          <h6 class="footer__heading">Ride smarter resources</h6>
+          <ul class="footer__list">
+            <li><a href="https://doi.org/10.1101/2022.03.01.481993" target="_blank" rel="noopener">Rider Balance While Shoulder Checking</a></li>
+            <li><a href="https://ggwash.org/view/34841/8-takeaways-from-the-bike-leagues-study-of-cyclist-fatalities" target="_blank" rel="noopener">Cycling Fatalities</a></li>
+            <li><a href="https://www.insurancebusinessmag.com/ca/news/breaking-news/aviva-canada-distracted-drivingrelated-accidents-on-the-rise-100634.aspx" target="_blank" rel="noopener">Distracted Driving</a></li>
+            <li><a href="https://www.sharetheroad.ca/files/Cycling_Safety_Overview___2012_12_05.pdf" target="_blank" rel="noopener">Overview Of Cycling Statistics</a></li>
           </ul>
         </div>
       </div>
-
+      <div class="col-lg-4 col-md-6">
+        <div class="footer__panel footer__panel--cta">
+          <h6 class="footer__heading">Stay in the loop</h6>
+          <p class="mb-3">Join our mailing list for launch updates, field notes, and exclusive offers.</p>
+          <a href="#subscribe" class="footer__cta">
+            <span class="footer__cta-icon"><i class="fas fa-paper-plane"></i></span>
+            Subscribe for updates
+          </a>
+          <div class="footer__badges mt-4">
+            <span class="badge">Kickstarter Funded</span>
+            <span class="badge">Canadian Built</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- START THE COPYRIGHT INFO  -->
-  <div class="footer-bottom pt-5 pb-5">
+  <div class="footer-bottom">
     <div class="container">
-      <div class="row text-center text-white">
-        <div class="col-12">
-          <div class="footer-bottom__copyright">
-            &COPY; Copyright {{ currentYear }} <a href="#">{{ APP_NAME }}</a>
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+          <p class="footer-bottom__copyright">
+            &COPY; {{ currentYear }} {{ APP_NAME }}. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="footer-bottom__social">
+            <a href="mailto:support@mantismirror.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://square.link/u/UHE8DcKB" target="_blank" rel="noopener" aria-label="Buy now"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#contact" aria-label="Contact"><i class="fas fa-comments"></i></a>
           </div>
         </div>
       </div>

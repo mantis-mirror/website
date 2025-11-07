@@ -1,7 +1,197 @@
-.solution {
-  padding: 4rem 0;
+@use '../../../scss/variables' as v;
 
-  button {
-    text-transform: capitalize;
+.solution {
+  position: relative;
+  padding: 6rem 0;
+  background: radial-gradient(circle at top, rgba(v.$secondary, 0.12), transparent 60%),
+    radial-gradient(circle at bottom, rgba(v.$primary, 0.08), transparent 55%), v.$white;
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 999px;
+    color: v.$primary;
+    background-color: rgba(v.$white, 0.85);
+    box-shadow: 0 1rem 2.5rem rgba(v.$black, 0.08);
+
+    &::before {
+      content: '';
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 50%;
+      background-color: v.$secondary;
+    }
+  }
+
+  .heading-line--accent {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(v.$primary, 0.8), rgba(v.$secondary, 0.8));
+    border-radius: 999px;
+  }
+}
+
+.solution-panel {
+  padding: 3rem;
+  border-radius: 2.5rem;
+  background: rgba(v.$white, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2.5rem 4rem rgba(v.$black, 0.15);
+}
+
+.solution-card {
+  height: 100%;
+  padding: 2.25rem 2.5rem;
+  border-radius: 1.75rem;
+  background: linear-gradient(160deg, rgba(v.$white, 0.95), rgba(v.$secondary, 0.08));
+  box-shadow: inset 0 0 0 1px rgba(v.$black, 0.04);
+  color: rgba(v.$black, 0.9);
+  line-height: 1.75;
+
+  h3 {
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.feature-list {
+  margin: 1.5rem 0 1.75rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+
+  li {
+    position: relative;
+    padding-left: 2.4rem;
+
+    strong {
+      color: v.$primary;
+    }
+
+    &::before {
+      content: '\\f058';
+      position: absolute;
+      top: 0.15rem;
+      left: 0;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: v.$secondary;
+      font-size: 1.1rem;
+      text-shadow: 0 0.35rem 1rem rgba(v.$black, 0.2);
+    }
+  }
+}
+
+.solution-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: v.$white;
+  background: linear-gradient(135deg, rgba(v.$primary, 0.95), rgba(v.$secondary, 0.9));
+  box-shadow: 0 1.5rem 2.5rem rgba(v.$black, 0.2);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: rgba(v.$white, 0.15);
+    font-size: 1.1rem;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 2rem 3rem rgba(v.$black, 0.22);
+    color: v.$white;
+  }
+
+  &--ghost {
+    background: rgba(v.$white, 0.12);
+    color: v.$primary;
+    border: 1px solid rgba(v.$primary, 0.2);
+    box-shadow: 0 1rem 2rem rgba(v.$black, 0.1);
+
+    &:hover,
+    &:focus {
+      color: v.$primary;
+      background: rgba(v.$white, 0.25);
+    }
+  }
+}
+
+.solution-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.media-shell {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(160deg, rgba(v.$primary, 0.08), rgba(v.$white, 0.92));
+  box-shadow: 0 2rem 3.5rem rgba(v.$black, 0.15);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 1.25rem;
+    border-radius: 1.5rem;
+    border: 1px dashed rgba(v.$primary, 0.15);
+    pointer-events: none;
+  }
+
+  &__title {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.75rem;
+    color: v.$primary;
+  }
+
+  &__caption {
+    margin-top: 1.5rem;
+    color: rgba(v.$black, 0.65);
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .solution {
+    padding: 4.5rem 0;
+  }
+
+  .solution-panel {
+    padding: 2.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .solution-card {
+    padding: 2rem 1.75rem;
+  }
+
+  .media-shell {
+    padding: 2rem 1.5rem;
   }
 }
