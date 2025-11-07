@@ -1,0 +1,162 @@
+@use '../../../scss/variables' as v;
+
+.faq {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(180deg, rgba(v.$primary, 0.05), rgba(v.$secondary, 0.08));
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: 999px;
+    color: v.$primary;
+    background: rgba(v.$white, 0.85);
+
+    &::before {
+      content: '';
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background-color: v.$secondary;
+    }
+  }
+
+  .heading-line--accent {
+    width: 90px;
+    height: 4px;
+    margin: 1.5rem auto 0;
+    background: linear-gradient(90deg, rgba(v.$primary, 0.8), rgba(v.$secondary, 0.8));
+    border-radius: 999px;
+  }
+}
+
+.faq__grid {
+  position: relative;
+}
+
+.faq__aside {
+  height: 100%;
+  padding: 2.5rem 2.25rem;
+  border-radius: 1.75rem;
+  background: rgba(v.$white, 0.92);
+  box-shadow: 0 1.75rem 3rem rgba(v.$black, 0.12);
+  border: 1px solid rgba(v.$primary, 0.08);
+  line-height: 1.7;
+
+  h3 {
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: v.$primary;
+  }
+
+  p {
+    color: rgba(v.$black, 0.75);
+  }
+}
+
+.faq__list {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+
+  li {
+    position: relative;
+    padding-left: 1.9rem;
+    font-weight: 500;
+    color: rgba(v.$black, 0.78);
+
+    &::before {
+      content: '\\f111';
+      position: absolute;
+      top: 0.35rem;
+      left: 0;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 0.6rem;
+      color: v.$secondary;
+      box-shadow: 0 0.4rem 1.1rem rgba(v.$secondary, 0.35);
+    }
+  }
+}
+
+.faq__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: v.$white;
+  background: linear-gradient(135deg, rgba(v.$primary, 0.9), rgba(v.$secondary, 0.95));
+  box-shadow: 0 1.4rem 2.5rem rgba(v.$black, 0.18);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 1.8rem 2.8rem rgba(v.$black, 0.2);
+    color: v.$white;
+  }
+}
+
+.faq__accordion {
+  .accordion-item {
+    border: none;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: rgba(v.$white, 0.9);
+    box-shadow: 0 1.25rem 2.5rem rgba(v.$black, 0.1);
+  }
+
+  .accordion-button {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 1.5rem 1.75rem;
+    border: none;
+    background: rgba(v.$white, 0.95);
+    color: rgba(v.$black, 0.85);
+
+    &:not(.collapsed) {
+      color: v.$primary;
+      background: rgba(v.$secondary, 0.12);
+      box-shadow: inset 0 -1px 0 rgba(v.$secondary, 0.15);
+    }
+  }
+
+  .accordion-body {
+    padding: 1.5rem 1.75rem 1.75rem;
+    background: rgba(v.$white, 0.96);
+    color: rgba(v.$black, 0.75);
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .faq {
+    padding: 4.5rem 0;
+  }
+
+  .faq__aside {
+    padding: 2.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .faq__aside {
+    padding: 2rem 1.75rem;
+  }
+
+  .faq__cta {
+    width: 100%;
+  }
+}
