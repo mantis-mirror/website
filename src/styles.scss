@@ -1,15 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
-// @use 'custom';
-
+/* Global styles */
 @use "scss/bootstrap/bootstrap";
 @use 'scss/fontawesome/fontawesome';
-
-
-// IMPORT THE COMPONENTS
 @use 'scss/components/animations';
 @use 'scss/components/buttons';
 @use 'scss/components/mixins';
 @use 'scss/components/typography';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --mantis-bg: #050d19;
+  --mantis-ink: #f5f8ff;
+  --mantis-muted: rgba(228, 243, 255, 0.72);
+  --mantis-accent: #6ef5b8;
+  --mantis-accent-dark: #2d8d6d;
+  --mantis-surface: rgba(255, 255, 255, 0.06);
+  --mantis-border: rgba(255, 255, 255, 0.12);
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--mantis-bg);
+  color: var(--mantis-ink);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--mantis-accent);
+  transition: color 200ms ease, opacity 200ms ease;
+
+  &:hover,
+  &:focus {
+    color: var(--mantis-accent-dark);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', 'Plus Jakarta Sans', serif;
+  color: var(--mantis-ink);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--mantis-muted);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

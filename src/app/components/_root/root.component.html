@@ -1,30 +1,62 @@
 <ng-container *ngIf="a(); else showNot">
-  <app-navbar></app-navbar>
+  <div class="landing">
+    <div class="landing__backdrop" aria-hidden="true">
+      <span class="landing__orb landing__orb--primary"></span>
+      <span class="landing__orb landing__orb--secondary"></span>
+      <span class="landing__orb landing__orb--tertiary"></span>
+      <span class="landing__beam landing__beam--left"></span>
+      <span class="landing__beam landing__beam--right"></span>
+    </div>
+    <div class="landing__grid-overlay" aria-hidden="true"></div>
 
-  <app-intro></app-intro>
+    <app-navbar class="landing__navbar"></app-navbar>
 
-  <app-subscribe-form></app-subscribe-form>
+    <main class="landing__main">
+      <section class="landing__section landing__section--hero">
+        <app-intro></app-intro>
+      </section>
 
-  <app-the-problem></app-the-problem>
+      <section class="landing__section landing__section--panel landing__section--glass">
+        <app-subscribe-form></app-subscribe-form>
+      </section>
 
-  <app-the-solution></app-the-solution>
+      <section class="landing__section landing__section--panel landing__section--problem">
+        <app-the-problem></app-the-problem>
+      </section>
 
-  <app-testimonials></app-testimonials>
+      <section class="landing__section landing__section--panel landing__section--solution">
+        <app-the-solution></app-the-solution>
+      </section>
 
-  <app-faq></app-faq>
+      <section class="landing__section landing__section--testimonials">
+        <app-testimonials></app-testimonials>
+      </section>
 
-  <app-contact></app-contact>
+      <section class="landing__section landing__section--panel landing__section--faq">
+        <app-faq></app-faq>
+      </section>
 
-  <app-footer></app-footer>
+      <section class="landing__section landing__section--panel landing__section--contact">
+        <app-contact></app-contact>
+      </section>
+    </main>
 
-  <app-back-to-top></app-back-to-top>
+    <footer class="landing__footer landing__section landing__section--panel landing__section--footer">
+      <app-footer></app-footer>
+    </footer>
+
+    <app-back-to-top></app-back-to-top>
+  </div>
 </ng-container>
 
 <ng-template #showNot>
-  <app-contact></app-contact>
-
-  <app-footer></app-footer>
-
-  <app-back-to-top></app-back-to-top>
+  <div class="landing landing--simple">
+    <section class="landing__section landing__section--panel landing__section--contact">
+      <app-contact></app-contact>
+    </section>
+    <footer class="landing__footer landing__section landing__section--panel landing__section--footer">
+      <app-footer></app-footer>
+    </footer>
+    <app-back-to-top></app-back-to-top>
+  </div>
 </ng-template>
-
