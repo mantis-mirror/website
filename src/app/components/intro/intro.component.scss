@@ -22,6 +22,62 @@
   gap: 0.5rem;
 }
 
+.purchase-cta {
+  margin: 1.5rem 0 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+  max-width: 28rem;
+}
+
+.buy-now-btn {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: v.$secondary;
+  color: v.$primary;
+  border: none;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.3);
+    color: v.$primary;
+  }
+}
+
+.shipping-note {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: v.$white;
+
+  .discount-code {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    margin-left: 0.4rem;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: v.$secondary;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  &__detail {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
 .intro-section {
   @include gradient;
   padding: 10rem 0 0 0;
@@ -68,5 +124,58 @@
   }
   &--border-2 {
     animation-delay: 1.5s;
+  }
+}
+
+.ctv-feature {
+  margin-top: 3rem;
+
+  .ctv-logo-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .ctv-logo {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+  }
+
+  .ctv-attribution {
+    margin: 0 auto 1.5rem;
+    max-width: 48rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.ctv-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.45);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .ctv-feature {
+    margin-top: 2rem;
+
+    .ctv-attribution {
+      font-size: 0.8rem;
+    }
   }
 }
