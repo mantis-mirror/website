@@ -20,4 +20,31 @@
 
   }
 
+  .nav-item--cta {
+    padding: 0;
+
+    .nav-link--cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1.4rem;
+      margin: 0 0.7rem;
+      border-radius: 999px;
+      background: v.$white;
+      color: v.$primary;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+
+      &:hover,
+      &:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2.1rem rgba(0, 0, 0, 0.25);
+        background: lighten(v.$white, 6%);
+        color: v.$primary;
+      }
+    }
+  }
+
 }
