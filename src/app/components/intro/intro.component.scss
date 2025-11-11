@@ -86,11 +86,21 @@
 }
 
 .intros {
-
-
   .video-box {
     position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 28rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.25);
 
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     a {
       // @include absoluteCenter;
@@ -147,6 +157,25 @@
     font-size: 0.9rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+@media (min-width: 992px) {
+  .intro-section {
+    padding-top: 7rem;
+
+    .row.align-items-center {
+      align-items: flex-start;
+    }
+  }
+
+  .intros {
+    .video-box {
+      max-width: 34rem;
+      margin-left: auto;
+      transform: translateY(-2rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.45);
+    }
   }
 }
 
