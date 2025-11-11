@@ -180,6 +180,21 @@
   text-align: left;
 }
 
+.hero-trust__item--media {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-trust__item--media .ctv-logo-link {
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 .hero-trust__item p {
   margin: 0.75rem 0 0;
 }
