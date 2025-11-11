@@ -219,6 +219,13 @@
   gap: 1rem;
 }
 
+.hero-trust__item--ctv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .hero-trust__item--supporter p {
   margin: 0;
 }
@@ -402,9 +409,10 @@
 }
 
 .ctv-logo-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .ctv-logo {
