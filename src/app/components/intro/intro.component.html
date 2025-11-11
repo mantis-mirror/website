@@ -1,20 +1,70 @@
 <section id="home" class="intro-section">
   <div class="container">
-    <div class="row align-items-center text-white">
-      <!-- START THE CONTENT FOR THE INTRO  -->
-      <div class="col-md-6 intros mb-4 sm-mb-0 text-start">
+    <div class="intro-hero text-white">
+      <div class="intro-hero__media">
+        <div class="video-feature">
+          <div class="video-feature__frame">
+            <img src="assets/images/main-mantis-comparison.jpg" alt="Mantis Mirror comparison" class="video-feature__cover">
+            <a href="https://vimeo.com/1085483480/0b943a06f3"
+               class="glightbox video-feature__trigger"
+               data-type="video"
+               data-effect="fade"
+               data-source="youtube"
+               data-width="1248"
+               data-autoPlayVideos="true">
+              <span class="video-feature__play" aria-hidden="true">
+                <i class="fas fa-play-circle"></i>
+              </span>
+              <span class="video-feature__label">Play</span>
+            </a>
+          </div>
+        </div>
+        <a
+          href="https://square.link/u/UHE8DcKB"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-pill btn-rounded text-decoration-none d-inline buy-now-btn buy-now-btn--primary"
+        >
+          Buy Now
+          <span><i class="fas fa-arrow-right"></i></span>
+        </a>
+        <div class="hero-trust">
+          <div class="hero-trust__item">
+            <a
+              class="ctv-logo-link"
+              href="#ctv-interview"
+              aria-label="Watch the Mantis Mirror interview on CTV News"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2nZEgTxRHX6zc2NSxYvWzxBGM_ZjX67odw&s"
+                alt="As seen on CTV News"
+                class="ctv-logo"
+              >
+            </a>
+            <p class="ctv-attribution">
+              Interview segment originally aired on CTV News. © CTV News. The CTV logo is a registered trademark of Bell Media Inc.
+              Shared here for informational purposes.
+            </p>
+          </div>
+          <div class="hero-trust__item hero-trust__item--supporter">
+            <img class="img-fluid me-1 bushtukahLogo" src="assets/images/bushtukah-logo.jpg" alt="video illutration" loading="lazy">
+            <p>Founding Supporter</p>
+          </div>
+        </div>
+      </div>
+      <div class="intro-hero__content">
         <h1 class="display-2">
           <span class="display-2--intro">{{ APP_NAME }}</span>
           <span class="display-2--description lh-base">
             Increasing Bicycle Safety and Enjoyment, by helping Eliminate Rear Blind Spots.
           </span>
         </h1>
-        <div>
+        <div class="intro-hero__copy">
           <div class="black-box">
             <i class="display-2--description mt-0">“Bike mirrors haven’t evolved much — as they still use a single mirror, which limits visibility. The Mantis Mirror System takes a different approach with its patented dual-mirror design that gives riders a rear view in various riding positions once set — even in an aero tuck — without needing to readjust. Greater safety and better riding efficiency. Worth checking out.”
               <strong class="d-block">— Simon Whitfield, Olympic Gold Medalist, Triathlon</strong></i>
           </div>
-          <div class="pt-2">
+          <div class="intro-hero__cta">
             <p class="display-2--description d-block">
               <img src="assets/images/kickstarter-logo.png" alt="video illutration" class="img-fluid me-1" width="50">
 <!--              <img src="assets/images/kickstarter-funded-badge.png" alt="video illutration" class="img-fluid me-1" width="150">-->
@@ -42,62 +92,40 @@
                 please subscribe for updates).
               </p>
             </div>
-            <a href="#subscribe" type="button" class="rounded-pill btn-rounded text-decoration-none d-inline">Subscribe Now
-              <span><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <button
-              type="button"
-              class="rounded-pill btn-rounded text-decoration-none d-inline helmet-fit-btn"
-              (click)="openHelmetFitDialog()"
-            >
-              Will the Mantis Mirror Fit My Helmet
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button>
-            <img class="img-fluid me-1 bushtukahLogo" src="assets/images/bushtukah-logo.jpg" alt="video illutration">
-            <p>Founding Supporter</p>
+            <div class="intro-hero__actions">
+              <a href="#subscribe" type="button" class="rounded-pill btn-rounded text-decoration-none d-inline">Subscribe Now
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+              <button
+                type="button"
+                class="rounded-pill btn-rounded text-decoration-none d-inline helmet-fit-btn"
+                (click)="openHelmetFitDialog()"
+              >
+                Will the Mantis Mirror Fit My Helmet
+                <span><i class="fas fa-arrow-right"></i></span>
+              </button>
+            </div>
           </div>
-
-        </div>
-
-      </div>
-      <!-- START THE CONTENT FOR THE VIDEO -->
-      <div class="col-md-6 intros text-end intro-video-col">
-        <div class="video-box">
-          <img src="assets/images/main-mantis-comparison.jpg" alt="Mantis Mirror comparison" class="img-fluid">
-          <a href="https://vimeo.com/1085483480/0b943a06f3"
-             class="glightbox position-absolute top-50 start-50 translate-middle"
-             data-type="video"
-             data-effect="fade"
-             data-source="youtube"
-             data-width="1248"
-             data-autoPlayVideos="true">
-            <span>
-              <i class="fas fa-play-circle"></i>
-            </span>
-            <span class="border-animation border-animation--border-1"></span>
-            <span class="border-animation border-animation--border-2"></span>
-          </a>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center text-white ctv-feature">
+    <div class="intro-benefits">
+      <div class="intro-benefits__card">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <p>Imagine a helmet mirror system that addresses limitations existing bike mirrors have: Enter the Mantis Mirror System - The First Bicycle Helmet Dual Mirror System Safety Accessory.</p>
+      </div>
+      <div class="intro-benefits__card">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <p>It is securely attachable &amp; detachable; Low vibration; A multitude of adjustments to suit more riders; A novel marking system which allows for quick mirror setup; AND; Once set, the ability to see from different height positions on the bike that a rider might assume e.g., from standing to more aero dynamic positions – all without having to readjust the Mantis™ Mirror System!</p>
+      </div>
+      <div class="intro-benefits__card">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <p>This patented system is now ready to hit the market via Kickstarter!</p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-white ctv-feature" id="ctv-interview">
       <div class="col-12 col-lg-10 text-center">
-        <a
-          class="ctv-logo-link"
-          href="#ctv-interview"
-          aria-label="Watch the Mantis Mirror interview on CTV News"
-        >
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2nZEgTxRHX6zc2NSxYvWzxBGM_ZjX67odw&s"
-            alt="As seen on CTV News"
-            class="ctv-logo"
-          >
-        </a>
-        <p class="ctv-attribution">
-          Interview segment originally aired on CTV News. © CTV News. The CTV logo is a registered trademark of Bell Media Inc.
-          Shared here for informational purposes.
-        </p>
-        <div id="ctv-interview" class="ctv-video-wrapper">
+        <div class="ctv-video-wrapper">
           <iframe
             src="https://player.vimeo.com/video/1082621507?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             title="Mantis Mirror CTV Interview"
@@ -106,6 +134,7 @@
             allowfullscreen
             loading="lazy"
           ></iframe>
+          <div class="ctv-video-overlay" aria-hidden="true"></div>
         </div>
       </div>
     </div>

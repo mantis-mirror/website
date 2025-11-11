@@ -13,6 +13,7 @@ import {CommonModule} from "@angular/common";
 import {MatDialog} from "@angular/material/dialog";
 import {DialogComponent} from "../dialog/dialog.component";
 import {SubscribeFormComponent} from "../subscribe-form/subscribe-form.component";
+import {StickyBuyBarComponent} from "../sticky-buy-bar/sticky-buy-bar.component";
 
 @Component({
   selector: 'app-root',
@@ -28,7 +29,8 @@ import {SubscribeFormComponent} from "../subscribe-form/subscribe-form.component
     TestimonialsComponent,
     TheProblemComponent,
     TheSolutionComponent,
-    SubscribeFormComponent
+    SubscribeFormComponent,
+    StickyBuyBarComponent
   ],
   templateUrl: './root.component.html',
   styleUrl: './root.component.scss'

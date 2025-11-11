@@ -9,7 +9,27 @@
 @use 'scss/components/animations';
 @use 'scss/components/buttons';
 @use 'scss/components/mixins';
+@use 'scss/components/hero';
 @use 'scss/components/typography';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  line-height: 1.65;
+  color: #0f0f0f;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
