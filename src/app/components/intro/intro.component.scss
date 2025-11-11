@@ -173,8 +173,17 @@
     .video-box {
       max-width: 34rem;
       margin-left: auto;
-      transform: translateY(-2rem);
+      transform: none;
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .intro-video-col {
+    display: flex;
+    justify-content: flex-end;
+
+    .video-box {
+      margin-top: clamp(-6rem, -8vw, -3.5rem);
     }
   }
 }
