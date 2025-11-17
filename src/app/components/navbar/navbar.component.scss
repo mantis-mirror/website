@@ -13,6 +13,34 @@
     width: 100%;
   }
 
+  .navbar-brand {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+
+    &__mark {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: clamp(0.05rem, 1vw, 0.35rem);
+      position: relative;
+    }
+
+    &__mantis {
+      height: clamp(2.2rem, 6vw, 3rem);
+      width: auto;
+      display: block;
+    }
+
+    &__flag {
+      height: clamp(2.1rem, 5vw, 2.8rem);
+      width: auto;
+      display: block;
+      margin-left: clamp(-0.2rem, -0.8vw, -0.4rem);
+      transform: translateY(0.15rem);
+    }
+  }
+
   @media (min-width: 992px) {
     .navbar-nav__groups {
       flex-direction: row;
