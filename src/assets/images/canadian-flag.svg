@@ -1,0 +1,32 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Canadian flag on a pole</title>
+  <desc id="desc">A stylized Canadian flag attached to a metallic pole.</desc>
+  <defs>
+    <linearGradient id="pole" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d6d6db" />
+      <stop offset="55%" stop-color="#a6a8b1" />
+      <stop offset="100%" stop-color="#7d7e87" />
+    </linearGradient>
+    <linearGradient id="finial" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd87c" />
+      <stop offset="65%" stop-color="#d78a1e" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feOffset dy="10" in="SourceAlpha" result="offset" />
+      <feGaussianBlur stdDeviation="12" in="offset" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.24 0" />
+      <feBlend in2="SourceGraphic" mode="normal" />
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="80" y="70" width="30" height="360" rx="15" fill="url(#pole)" />
+    <circle cx="95" cy="70" r="24" fill="url(#finial)" stroke="#d06c00" stroke-width="4" />
+    <g transform="translate(110 110)">
+      <path d="M0 20C46 8 92 -8 138 2C184 12 230 32 276 22V242C230 252 184 232 138 242C92 252 46 268 0 256V20Z" fill="#b80000" />
+      <path d="M78 38C120 26 162 10 204 20V228C162 238 120 254 78 244V38Z" fill="#fff8f3" />
+      <path d="M78 38V244C50 250 25 256 0 250V20C25 14 50 8 78 14Z" fill="#d40000" />
+      <path d="M204 20V228C232 222 257 216 282 222V2C257 8 232 14 204 8Z" fill="#d40000" />
+      <path d="M141 72l-14 32h-28l23 27-18 50 38-20 38 20-18-50 23-27h-28l-14-32z" fill="#bf1010" stroke="#8a0000" stroke-width="6" stroke-linejoin="round" />
+    </g>
+  </g>
+</svg>

@@ -6,6 +6,34 @@
   padding: 0.75rem 0;
   backdrop-filter: blur(14px);
 
+  .navbar-brand {
+    display: inline-flex;
+    align-items: flex-end;
+    padding: 0;
+    margin-right: 0.65rem;
+
+    &__wrapper {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 0.15rem;
+    }
+
+    &__logo {
+      display: block;
+      width: clamp(120px, 18vw, 160px);
+      height: auto;
+    }
+
+    &__flag {
+      width: clamp(50px, 7vw, 88px);
+      height: auto;
+      transform-origin: left bottom;
+      transform: rotate(-12deg);
+      margin-left: -0.35rem;
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+    }
+  }
+
   .navbar-nav__groups {
     display: flex;
     flex-direction: column;
