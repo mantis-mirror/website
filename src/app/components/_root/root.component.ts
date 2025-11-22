@@ -5,6 +5,7 @@ import {FaqComponent} from "../faq/faq.component";
 import {FooterComponent} from "../footer/footer.component";
 import {IntroComponent} from "../intro/intro.component";
 import {NavbarComponent} from "../navbar/navbar.component";
+import {AboutComponent} from "../about/about.component";
 import {TestimonialsComponent} from "../testimonials/testimonials.component";
 import {TheProblemComponent} from "../the-problem/the-problem.component";
 import {TheSolutionComponent} from "../the-solution/the-solution.component";
@@ -21,6 +22,7 @@ import {StickyBuyBarComponent} from "../sticky-buy-bar/sticky-buy-bar.component"
   imports: [
     CommonModule,
     BackToTopComponent,
+    AboutComponent,
     ContactComponent,
     FaqComponent,
     FooterComponent,
