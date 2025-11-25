@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { Collapse } from 'bootstrap';
 import { PHONE_NUMBER } from "../../constants";
-import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -13,13 +13,22 @@ export class NavbarComponent {
 
   protected readonly PHONE_NUMBER = PHONE_NUMBER;
 
-  constructor(
-    private router: Router
-  ) {
-  }
+  onNavItemClick(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
 
-  test() {
-    console.log('test');
-    this.router.navigate([], { fragment: 'testimonials' })
+    const isMobile = window.innerWidth < 992;
+    if (!isMobile) {
+      return;
+    }
+
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (!navbarCollapse) {
+      return;
+    }
+
+    const collapseInstance = Collapse.getInstance(navbarCollapse) ?? new Collapse(navbarCollapse, { toggle: false });
+    collapseInstance.hide();
   }
 }

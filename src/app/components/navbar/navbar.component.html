@@ -22,24 +22,25 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <div class="navbar-nav__groups">
         <ul class="navbar-nav navbar-nav--primary">
-          <li class="nav-item nav-item--primary"><a class="nav-link" href="#solution">How it Works</a></li>
+          <li class="nav-item nav-item--primary"><a class="nav-link" href="#solution" (click)="onNavItemClick()">How it Works</a></li>
           <li class="nav-item nav-item--cta">
             <a
               class="nav-link nav-link--cta"
               href="https://square.link/u/UHE8DcKB"
               target="_blank"
               rel="noopener noreferrer"
+              (click)="onNavItemClick()"
             >
               Buy Now
             </a>
           </li>
-          <li class="nav-item nav-item--primary"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item nav-item--primary"><a class="nav-link" href="#contact" (click)="onNavItemClick()">Contact</a></li>
         </ul>
         <ul class="navbar-nav navbar-nav--secondary">
-          <li class="nav-item"><a class="nav-link" href="#the-problem">The Challenge</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">Faq</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-problem" (click)="onNavItemClick()">The Challenge</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq" (click)="onNavItemClick()">Faq</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" (click)="onNavItemClick()">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials" (click)="onNavItemClick()">Testimonials</a></li>
         </ul>
       </div>
       <a href="tel:16138301300" class="d-none rounded-pill btn-rounded">
