@@ -16,30 +16,42 @@
         >
       </span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-controls="navbarNav"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation"
+      (click)="toggleMenu()"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarNav"
+      [class.show]="isMenuOpen"
+    >
       <div class="navbar-nav__groups">
         <ul class="navbar-nav navbar-nav--primary">
-          <li class="nav-item nav-item--primary"><a class="nav-link" href="#solution">How it Works</a></li>
+          <li class="nav-item nav-item--primary"><a class="nav-link" href="#solution" (click)="closeMenu()">How it Works</a></li>
           <li class="nav-item nav-item--cta">
             <a
               class="nav-link nav-link--cta"
               href="https://square.link/u/UHE8DcKB"
               target="_blank"
               rel="noopener noreferrer"
+              (click)="closeMenu()"
             >
               Buy Now
             </a>
           </li>
-          <li class="nav-item nav-item--primary"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item nav-item--primary"><a class="nav-link" href="#contact" (click)="closeMenu()">Contact</a></li>
         </ul>
         <ul class="navbar-nav navbar-nav--secondary">
-          <li class="nav-item"><a class="nav-link" href="#the-problem">The Challenge</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">Faq</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-problem" (click)="closeMenu()">The Challenge</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq" (click)="closeMenu()">Faq</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about" (click)="closeMenu()">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials" (click)="closeMenu()">Testimonials</a></li>
         </ul>
       </div>
       <a href="tel:16138301300" class="d-none rounded-pill btn-rounded">
