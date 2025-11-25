@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PHONE_NUMBER } from "../../constants";
-import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -12,14 +11,20 @@ import { Router } from "@angular/router";
 export class NavbarComponent {
 
   protected readonly PHONE_NUMBER = PHONE_NUMBER;
+  isMenuOpen = false;
 
-  constructor(
-    private router: Router
-  ) {
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
-  test() {
-    console.log('test');
-    this.router.navigate([], { fragment: 'testimonials' })
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    if (window.innerWidth >= 992 && this.isMenuOpen) {
+      this.closeMenu();
+    }
   }
 }
