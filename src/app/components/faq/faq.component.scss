@@ -1,0 +1,37 @@
+#accordionExample {
+  .accordion-item {
+    border: none;
+  }
+
+  .accordion-header {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-after: 0;
+  }
+
+  .accordion-button {
+    margin: 0;
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .accordion-collapse {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+  }
+
+  .accordion-collapse.show,
+  .accordion-collapse.collapsing {
+    max-height: var(--faq-panel-height, 0px);
+  }
+
+  .accordion-body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
