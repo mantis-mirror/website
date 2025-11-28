@@ -1,0 +1,42 @@
+:host {
+  display: block;
+}
+
+.faq {
+  .accordion-header {
+    margin: 0;
+  }
+
+  .accordion-button {
+    margin: 0;
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+    -webkit-padding-start: 1.5rem;
+    -webkit-padding-end: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .accordion-collapse {
+    overflow: hidden;
+    transition: height 0.35s ease;
+
+    &.collapse {
+      display: block;
+      height: 0;
+    }
+
+    &.collapsing {
+      height: 0;
+    }
+
+    &.show {
+      height: auto;
+    }
+  }
+
+  .accordion-body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
