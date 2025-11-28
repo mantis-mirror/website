@@ -1,0 +1,23 @@
+.faq {
+  // Mobile-friendly accordion behavior
+  @media (max-width: 767.98px) {
+    .accordion-item {
+      margin-bottom: 1rem;
+    }
+
+    .accordion-collapse {
+      overflow: hidden;
+      height: auto !important;
+
+      &.collapsing {
+        height: auto !important;
+      }
+    }
+
+    .accordion-body {
+      position: static;
+      height: auto;
+      padding: 1.25rem 1.5rem;
+    }
+  }
+}
