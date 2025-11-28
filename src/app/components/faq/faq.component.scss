@@ -1,0 +1,24 @@
+#accordionExample {
+  overflow-anchor: none;
+}
+
+#accordionExample .accordion-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  height: auto !important;
+  transition: grid-template-rows 0.35s ease;
+  overflow: hidden;
+}
+
+#accordionExample .accordion-collapse.show,
+#accordionExample .accordion-collapse.collapsing {
+  grid-template-rows: 1fr;
+}
+
+#accordionExample .accordion-collapse.collapsing {
+  transition: grid-template-rows 0.35s ease;
+}
+
+#accordionExample .accordion-collapse > .accordion-body {
+  overflow: hidden;
+}
