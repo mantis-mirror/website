@@ -10,6 +10,7 @@ import { TheSolutionComponent } from "./components/the-solution/the-solution.com
 import { ContactComponent } from "./components/contact/contact.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { BackToTopComponent } from "./components/back-to-top/back-to-top.component";
+import { AnalyticsService } from "./services/analytics.service";
 
 @Component({
   selector: 'app-root',
@@ -21,9 +22,11 @@ import { BackToTopComponent } from "./components/back-to-top/back-to-top.compone
 export class AppComponent {
   title = 'angular-bootstrap-starter';
 
-  constructor() {
+  constructor(analyticsService: AnalyticsService) {
     afterRender(() => {
       (window as any).GLightbox({});
     });
+
+    analyticsService.initialize();
   }
 }
