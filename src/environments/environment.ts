@@ -1,3 +1,3 @@
 export const environment = {
-  gaMeasurementId: 'G-XXXXXXXXXX'
+  gaMeasurementId: 'G-5W211KDE2K'
 };

@@ -35,6 +35,10 @@ export class AnalyticsService {
   }
 
   private installGtag(): void {
+    if (typeof window.gtag === 'function' || this.hasExistingGtagScript()) {
+      return;
+    }
+
     const script = this.document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${this.measurementId}`;
@@ -105,5 +109,10 @@ export class AnalyticsService {
       link_url: destination,
       transport_type: 'beacon',
     });
+  }
+
+  private hasExistingGtagScript(): boolean {
+    const gtagScriptSelector = `script[src="https://www.googletagmanager.com/gtag/js?id=${this.measurementId}"]`;
+    return this.document.querySelector(gtagScriptSelector) !== null;
   }
 }
