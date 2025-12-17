@@ -89,9 +89,12 @@
             </div>
             <!-- client picture  -->
             <div class="testimonials__picture">
-              <a data-bs-toggle="modal" data-bs-target="#brockTestimonialModal" role="button">
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openBrockModal()"
+                      aria-label="Open Brock testimonial">
                 <img src="assets/images/testimonials/Brock-testimonial.png" alt="client-3 picture" class="rounded-circle img-fluid" loading="lazy">
-              </a>
+              </button>
             </div>
             <!-- client name & role  -->
             <div class="testimonials__name">
@@ -115,29 +118,31 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="brockTestimonialModal" tabindex="-1" aria-labelledby="brockTestimonialModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="brockTestimonialModalLabel">Brock</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <ng-template #brockDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">Brock</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close Brock testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/testimonials/Brock-testimonial.png" alt="Brock testimonial" class="img-fluid rounded">
         </div>
-        <div class="modal-body">
-          <div class="row g-4 align-items-center">
-            <div class="col-12 col-md-6">
-              <img src="assets/images/testimonials/Brock-testimonial.png" alt="Brock testimonial" class="img-fluid rounded">
-            </div>
-            <div class="col-12 col-md-6">
-              <p class="mb-3">I received mine late Wednesday — shipping was pretty quick (it came from Ottawa). The training videos were well done overall. Because they emphasize how important the helmet mount position is (think GoPro-style mount), the full setup took me closer to 40 minutes even though the videos total around 20. I did it solo, and I can see how their two-person recommended install would make positioning easier.</p>
-              <p class="mb-3">After the minimum 24 hours setting time, I was keen to try it, so I took it for a ride around the block. First impressions are surprisingly positive. The mirrors are stable, very clear (I forgot to peel the protective film at first…), and the whole thing is really light — lighter than my longtime single-mirror setup.</p>
-              <p class="mb-3">The big claim — the two-position setup working for both upright and more aero riding — actually holds up. I did see a bit of my shoulder in the upper mirror when down low, but it was maybe 10% of the view and didn’t affect visibility. They mention this might happen, so it wasn’t unexpected. I can see how this will save me some energy on longer rides, not having to pop up as often to check behind me.</p>
-              <p class="mb-4">Looking forward to giving it a proper test ride once the weather cooperates. As a small bonus, it’s nice knowing this is a Canadian innovation, made in Canada. Well done, Mantis Mirror.</p>
-              <p class="fw-bold mb-0">— Brock</p>
-            </div>
-          </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-3">I received mine late Wednesday — shipping was pretty quick (it came from Ottawa). The training videos were well done overall. Because they emphasize how important the helmet mount position is (think GoPro-style mount), the full setup took me closer to 40 minutes even though the videos total around 20. I did it solo, and I can see how their two-person recommended install would make positioning easier.</p>
+          <p class="mb-3">After the minimum 24 hours setting time, I was keen to try it, so I took it for a ride around the block. First impressions are surprisingly positive. The mirrors are stable, very clear (I forgot to peel the protective film at first…), and the whole thing is really light — lighter than my longtime single-mirror setup.</p>
+          <p class="mb-3">The big claim — the two-position setup working for both upright and more aero riding — actually holds up. I did see a bit of my shoulder in the upper mirror when down low, but it was maybe 10% of the view and didn’t affect visibility. They mention this might happen, so it wasn’t unexpected. I can see how this will save me some energy on longer rides, not having to pop up as often to check behind me.</p>
+          <p class="mb-4">Looking forward to giving it a proper test ride once the weather cooperates. As a small bonus, it’s nice knowing this is a Canadian innovation, made in Canada. Well done, Mantis Mirror.</p>
+          <p class="fw-bold mb-0">— Brock</p>
         </div>
       </div>
-    </div>
-  </div>
+    </mat-dialog-content>
+  </ng-template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 </section>
