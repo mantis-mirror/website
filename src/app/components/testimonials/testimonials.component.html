@@ -89,9 +89,12 @@
             </div>
             <!-- client picture  -->
             <div class="testimonials__picture">
-              <a data-bs-toggle="modal" data-bs-target="#brockTestimonialModal" role="button">
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openBrockModal()"
+                      aria-label="Open Brock testimonial">
                 <img src="assets/images/testimonials/Brock-testimonial.png" alt="client-3 picture" class="rounded-circle img-fluid" loading="lazy">
-              </a>
+              </button>
             </div>
             <!-- client name & role  -->
             <div class="testimonials__name">
@@ -115,7 +118,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="brockTestimonialModal" tabindex="-1" aria-labelledby="brockTestimonialModalLabel" aria-hidden="true">
+  <div #brockModal class="modal fade" id="brockTestimonialModal" tabindex="-1" aria-labelledby="brockTestimonialModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
