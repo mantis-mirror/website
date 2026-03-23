@@ -10,9 +10,24 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
   styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
+  @ViewChild('domDialog') domDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('brockDialog') brockDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
+
+  openDomModal(): void {
+    const domDialogTemplate = this.domDialogTemplate;
+
+    if (!domDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(domDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
 
   openBrockModal(): void {
     const brockDialogTemplate = this.brockDialogTemplate;
