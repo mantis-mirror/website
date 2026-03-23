@@ -47,7 +47,7 @@
             <div class="testimonials__card">
               <p class="lh-lg">
                 <i class="fas fa-quote-left"></i>
-                … it offered clarity; negligible vibration and most importantly, the lack of a need to adjust the mirror when going from an upright to a more aerodynamic position.
+                … the mirrors are really clear, there’s negligible vibration, and there’s little need to adjust anything when moving from upright to a lower position on the bars.
                 <i class="fas fa-quote-right"></i>
                 <span class="d-block ratings p-1">
                   <i class="fas fa-star"></i>
@@ -60,9 +60,12 @@
             </div>
             <!-- client picture  -->
             <div class="testimonials__picture">
-              <a href="https://youtu.be/X071xX4JU2E" target="_blank">
-                <img src="assets/images/testimonials/dom-testimonial.jpg" alt="client-2 picture" class="rounded-circle img-fluid" loading="lazy">
-              </a>
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openDomModal()"
+                      aria-label="Open Dom testimonial">
+                <img src="assets/images/Mantis_DS_Testimonial_Grey.png" alt="Dom testimonial" class="rounded-circle img-fluid" loading="lazy">
+              </button>
             </div>
             <!-- client name & role  -->
             <div class="testimonials__name">
@@ -118,6 +121,32 @@
       </div>
     </div>
   </div>
+  <ng-template #domDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">Dom</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close Dom testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/Mantis_DS_Testimonial_Grey.png" alt="Dom testimonial" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-3">I got my Mantis Mirror this past fall through their Kickstarter program. For a bit of background, I’m a recreational road cyclist and have previously used other helmet mirrors, but wasn’t happy with the clarity or the vibration aspects.</p>
+          <p class="mb-3">The biggest issue I’ve found with other mirrors is having to adjust them after moving from an upright, to a more aero position while riding. So I thought I’d give the Mantis a try—and so far, I’ve not been disappointed. The mirrors are really clear, there’s negligible vibration, and most importantly, once it’s set up, there’s little need to adjust anything when moving from upright to a lower position on the bars.</p>
+          <p class="mb-3">A couple of added bonuses: once the base mount is attached to the helmet, the removable Mantis unit attaches quickly, and there’s a simple marking system that helps you find your preferred setup for future rides.</p>
+          <p class="mb-4">All in all, I’m quite happy with this helmet mirror and looking forward to many long rides with it.</p>
+          <p class="fw-bold mb-0">— Dom</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
   <ng-template #brockDialog>
     <div mat-dialog-title class="d-flex justify-content-between align-items-start">
       <h2 class="h5 mb-0">Brock</h2>
