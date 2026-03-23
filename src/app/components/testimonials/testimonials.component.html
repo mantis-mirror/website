@@ -30,10 +30,12 @@
             </div>
             <!-- client picture  -->
             <div class="testimonials__picture">
-              <a href="https://www.youtube.com/watch?v=N3rkKDcvPvg" target="_blank">
-                <img src="assets/images/testimonials/lee-testimonial.jpg" alt="client-1 picture" class="rounded-circle img-fluid" loading="lazy">
-
-              </a>
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openLeeModal()"
+                      aria-label="Open Lee testimonial">
+                <img src="assets/images/testimonials/lee-testimonial.jpg" alt="Lee testimonial" class="rounded-circle img-fluid" loading="lazy">
+              </button>
             </div>
             <!-- client name & role  -->
             <div class="testimonials__name">
@@ -121,6 +123,31 @@
       </div>
     </div>
   </div>
+  <ng-template #leeDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">Lee</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close Lee testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/Mantis_LB_Testimonial.jpg" alt="Lee testimonial" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-3">I am an experienced bike rider, cycling many hours a week throughout most of the year. I can’t recall how many bike mirrors I’ve used or broken over the years, as none really seemed to work that well. So when I saw the Mantis Mirror on Kickstarter, thought I’d give it a try.</p>
+          <p class="mb-3">I mostly ride a hybrid in the upright position while on city streets, but even with our poor roads, my early feedback on this mirror is quite positive. It’s super clear and very stable.</p>
+          <p class="mb-4">Occassionally when riding in a headwind, I’ll also ride lower over the bars, so it’s nice to be able to also use the 2nd mirror without having to fiddle around with it. Thank you.</p>
+          <p class="fw-bold mb-0">— Lee</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
   <ng-template #domDialog>
     <div mat-dialog-title class="d-flex justify-content-between align-items-start">
       <h2 class="h5 mb-0">Dom</h2>

@@ -10,10 +10,25 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
   styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
+  @ViewChild('leeDialog') leeDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('domDialog') domDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('brockDialog') brockDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
+
+  openLeeModal(): void {
+    const leeDialogTemplate = this.leeDialogTemplate;
+
+    if (!leeDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(leeDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
 
   openDomModal(): void {
     const domDialogTemplate = this.domDialogTemplate;
