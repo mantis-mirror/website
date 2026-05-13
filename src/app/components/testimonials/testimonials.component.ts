@@ -13,6 +13,7 @@ export class TestimonialsComponent {
   @ViewChild('leeDialog') leeDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('domDialog') domDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('brockDialog') brockDialogTemplate?: TemplateRef<unknown>;
+  @ViewChild('chrisDialog') chrisDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
 
@@ -52,6 +53,20 @@ export class TestimonialsComponent {
     }
 
     this.dialog.open(brockDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
+
+  openChrisModal(): void {
+    const chrisDialogTemplate = this.chrisDialogTemplate;
+
+    if (!chrisDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(chrisDialogTemplate, {
       maxWidth: '900px',
       width: '90%',
       autoFocus: false
