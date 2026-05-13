@@ -107,6 +107,38 @@
               <p class="fw-light">Customer</p>
             </div>
           </div>
+          <!-- CAROUSEL ITEM 4 -->
+          <div class="carousel-item">
+            <!-- testimonials card  -->
+            <div class="testimonials__card">
+              <p class="lh-lg">
+                <i class="fas fa-quote-left"></i>
+                The Mantis lets me stay low while still checking for other cyclists or traffic behind me.
+                <i class="fas fa-quote-right"></i>
+                <span class="d-block ratings p-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </p>
+            </div>
+            <!-- client picture  -->
+            <div class="testimonials__picture">
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openChrisModal()"
+                      aria-label="Open Chris L. testimonial">
+                <img src="assets/images/Mantis Chris L.jpg" alt="Chris L. testimonial" class="rounded-circle img-fluid" loading="lazy">
+              </button>
+            </div>
+            <!-- client name & role  -->
+            <div class="testimonials__name">
+              <h3>Chris L.</h3>
+              <p class="fw-light">Ottawa triathlete and early Kickstarter backer</p>
+            </div>
+          </div>
         </div>
         <div class="text-center">
           <button class="btn btn-outline-light fas fa-long-arrow-alt-left me-2"
@@ -196,6 +228,30 @@
           <p class="mb-3">The big claim — the two-position setup working for both upright and more aero riding — actually holds up. I did see a bit of my shoulder in the upper mirror when down low, but it was maybe 10% of the view and didn’t affect visibility. They mention this might happen, so it wasn’t unexpected. I can see how this will save me some energy on longer rides, not having to pop up as often to check behind me.</p>
           <p class="mb-4">Looking forward to giving it a proper test ride once the weather cooperates. As a small bonus, it’s nice knowing this is a Canadian innovation, made in Canada. Well done, Mantis Mirror.</p>
           <p class="fw-bold mb-0">— Brock</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
+  <ng-template #chrisDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">Chris L.</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close Chris L. testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/Mantis Chris L.jpg" alt="Chris L. testimonial" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-3">I’ve never been a fan of bike mirrors. Most of the ones I tried were either shaky or useless once you’re riding in the drops or aero position.</p>
+          <p class="mb-4">I’ve been active in triathlon for several years and I’m always looking for an edge. After working briefly on some marketing for the Kickstarter campaign, I also became one of the early backers. On long rides, when I’m in the aero position, the Mantis lets me stay low while still checking for other cyclists or traffic behind me. It’s not only a great safety product — it also saves energy because I don’t have to keep popping up to look back.</p>
+          <p class="fw-bold mb-0">— Chris L., Ottawa triathlete and early Kickstarter backer</p>
         </div>
       </div>
     </mat-dialog-content>
