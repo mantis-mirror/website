@@ -139,6 +139,38 @@
               <p class="fw-light">Ottawa triathlete and early Kickstarter backer</p>
             </div>
           </div>
+          <!-- CAROUSEL ITEM 5 -->
+          <div class="carousel-item">
+            <!-- testimonials card  -->
+            <div class="testimonials__card">
+              <p class="lh-lg">
+                <i class="fas fa-quote-left"></i>
+                I really enjoy the Mantis Mirror. It's easy to adjust and the vision is very clear.
+                <i class="fas fa-quote-right"></i>
+                <span class="d-block ratings p-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </p>
+            </div>
+            <!-- client picture  -->
+            <div class="testimonials__picture">
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openLisanneModal()"
+                      aria-label="Open Lisanne P testimonial">
+                <img src="assets/images/testimonials/Mantis_Female_Cycling_Avatar.png" alt="Lisanne P testimonial" class="rounded-circle img-fluid" loading="lazy">
+              </button>
+            </div>
+            <!-- client name & role  -->
+            <div class="testimonials__name">
+              <h3>Lisanne P</h3>
+              <p class="fw-light">Recreational road bike cyclist</p>
+            </div>
+          </div>
         </div>
         <div class="text-center">
           <button class="btn btn-outline-light fas fa-long-arrow-alt-left me-2"
@@ -252,6 +284,29 @@
           <p class="mb-3">I’ve never been a fan of bike mirrors. Most of the ones I tried were either shaky or useless once you’re riding in the drops or aero position.</p>
           <p class="mb-4">I’ve been active in triathlon for several years and I’m always looking for an edge. After working briefly on some marketing for the Kickstarter campaign, I also became one of the early backers. On long rides, when I’m in the aero position, the Mantis lets me stay low while still checking for other cyclists or traffic behind me. It’s not only a great safety product — it also saves energy because I don’t have to keep popping up to look back.</p>
           <p class="fw-bold mb-0">— Chris L., Ottawa triathlete and early Kickstarter backer</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
+  <ng-template #lisanneDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">Lisanne P</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close Lisanne P testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/testimonials/Mantis_Female_Cycling_Avatar.png" alt="Lisanne P testimonial" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-4">I really enjoy the Mantis Mirror. It's easy to adjust and the vision is very clear. On a corner of a street if I am on a bicycle path I can see if a car is turning right. The installation and setup videos are well explained.</p>
+          <p class="fw-bold mb-0">— Lisanne P, recreational road bike cyclist</p>
         </div>
       </div>
     </mat-dialog-content>

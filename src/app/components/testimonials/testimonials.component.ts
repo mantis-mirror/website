@@ -14,6 +14,7 @@ export class TestimonialsComponent {
   @ViewChild('domDialog') domDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('brockDialog') brockDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('chrisDialog') chrisDialogTemplate?: TemplateRef<unknown>;
+  @ViewChild('lisanneDialog') lisanneDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
 
@@ -67,6 +68,20 @@ export class TestimonialsComponent {
     }
 
     this.dialog.open(chrisDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
+
+  openLisanneModal(): void {
+    const lisanneDialogTemplate = this.lisanneDialogTemplate;
+
+    if (!lisanneDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(lisanneDialogTemplate, {
       maxWidth: '900px',
       width: '90%',
       autoFocus: false
