@@ -16,6 +16,7 @@ export class TestimonialsComponent {
   @ViewChild('chrisDialog') chrisDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('lisanneDialog') lisanneDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('jerryDialog') jerryDialogTemplate?: TemplateRef<unknown>;
+  @ViewChild('chantalDialog') chantalDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
 
@@ -97,6 +98,20 @@ export class TestimonialsComponent {
     }
 
     this.dialog.open(jerryDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
+
+  openChantalModal(): void {
+    const chantalDialogTemplate = this.chantalDialogTemplate;
+
+    if (!chantalDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(chantalDialogTemplate, {
       maxWidth: '900px',
       width: '90%',
       autoFocus: false
