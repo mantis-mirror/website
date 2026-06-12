@@ -235,6 +235,38 @@
               <p class="fw-light">Cyclist</p>
             </div>
           </div>
+          <!-- CAROUSEL ITEM 8 -->
+          <div class="carousel-item">
+            <!-- testimonials card  -->
+            <div class="testimonials__card">
+              <p class="lh-lg">
+                <i class="fas fa-quote-left"></i>
+                The dual-mirror design allows me to maintain rear visibility whether I'm riding upright or in a more aerodynamic position, without constantly stopping to readjust the mirror.
+                <i class="fas fa-quote-right"></i>
+                <span class="d-block ratings p-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </p>
+            </div>
+            <!-- client picture  -->
+            <div class="testimonials__picture">
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openReneModal()"
+                      aria-label="Open René Demers testimonial">
+                <img src="assets/images/Mantis_Male_Cycling_Avatar.png" alt="René Demers testimonial" class="rounded-circle img-fluid" loading="lazy">
+              </button>
+            </div>
+            <!-- client name & role  -->
+            <div class="testimonials__name">
+              <h3>René Demers</h3>
+              <p class="fw-light">Long-time cyclist</p>
+            </div>
+          </div>
         </div>
         <div class="text-center">
           <button class="btn btn-outline-light fas fa-long-arrow-alt-left me-2"
@@ -417,6 +449,33 @@
         <div class="col-12 col-md-6">
           <p class="mb-4">This is a great addition for any cyclist looking to improve safety and expand their field of view while riding. It takes a little time to get used to using two mirrors, but the result is absolutely worth it, effectively doubling the viewing area with a sharp, clear image. Unlike some lower-quality mirrors, the visibility remains consistently crisp and reliable, which really makes a difference on the road.</p>
           <p class="fw-bold mb-0">— Chantal Carey</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
+  <ng-template #reneDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">René Demers</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close René Demers testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/Mantis_Male_Cycling_Avatar.png" alt="René Demers testimonial" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-4">I've been cycling for many years and have tried several mirror solutions, but the Mantis Mirror System stands out because it solves a problem that traditional bicycle mirrors never really addressed. The dual-mirror design allows me to maintain rear visibility whether I'm riding upright or in a more aerodynamic position, without constantly stopping to readjust the mirror.</p>
+          <p class="mb-4">What impressed me most is how clear and stable the view remains while riding. The system is lightweight, easy to mount, and once adjusted, it stays where it's supposed to. Being able to quickly check traffic behind me without turning my head as much helps me feel more aware of my surroundings and more confident on the road.</p>
+          <p class="mb-4">I also appreciate that this is a Canadian-designed product that clearly reflects years of thought, testing, and refinement. It's easy to see that the creator is a cyclist who designed a solution based on real-world riding experience.</p>
+          <p class="mb-4">No mirror can replace good riding habits and shoulder checks, but the Mantis Mirror System has become a valuable part of my safety toolkit. For cyclists who want better rear visibility and greater situational awareness, I believe it's a worthwhile investment and an innovative step forward in bicycle safety.</p>
+          <p class="mb-4">Thank you and rubber side down!</p>
+          <p class="fw-bold mb-0">— René Demers, Long-time cyclist</p>
         </div>
       </div>
     </mat-dialog-content>
