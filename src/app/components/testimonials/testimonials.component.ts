@@ -17,6 +17,7 @@ export class TestimonialsComponent {
   @ViewChild('lisanneDialog') lisanneDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('jerryDialog') jerryDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('chantalDialog') chantalDialogTemplate?: TemplateRef<unknown>;
+  @ViewChild('reneDialog') reneDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
 
@@ -112,6 +113,20 @@ export class TestimonialsComponent {
     }
 
     this.dialog.open(chantalDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
+
+  openReneModal(): void {
+    const reneDialogTemplate = this.reneDialogTemplate;
+
+    if (!reneDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(reneDialogTemplate, {
       maxWidth: '900px',
       width: '90%',
       autoFocus: false
