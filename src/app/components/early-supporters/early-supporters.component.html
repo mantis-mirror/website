@@ -1,0 +1,30 @@
+<section class="early-supporters" [class.is-open]="isExpanded">
+  <button
+    type="button"
+    class="early-supporters__toggle"
+    (click)="toggle()"
+    [attr.aria-expanded]="isExpanded"
+    aria-controls="early-supporters-panel"
+  >
+    <span class="early-supporters__label">Early Supporters</span>
+    <span class="early-supporters__chevron" aria-hidden="true"></span>
+  </button>
+
+  <div
+    class="early-supporters__panel"
+    [attr.aria-hidden]="!isExpanded"
+    id="early-supporters-panel"
+  >
+    <div class="early-supporters__logos">
+      <img
+        src="assets/images/bushtukah-logo.jpg"
+        alt="Bushtukah logo"
+        class="early-supporters__logo"
+        loading="lazy"
+      >
+      <div class="early-supporters__logo early-supporters__logo--placeholder" aria-hidden="true">
+        Future supporter spot
+      </div>
+    </div>
+  </div>
+</section>
