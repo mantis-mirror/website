@@ -10,6 +10,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
   styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
+  @ViewChild('helenDialog') helenDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('leeDialog') leeDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('domDialog') domDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('brockDialog') brockDialogTemplate?: TemplateRef<unknown>;
@@ -18,9 +19,22 @@ export class TestimonialsComponent {
   @ViewChild('jerryDialog') jerryDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('chantalDialog') chantalDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('reneDialog') reneDialogTemplate?: TemplateRef<unknown>;
-  @ViewChild('helenDialog') helenDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
+
+  openHelenModal(): void {
+    const helenDialogTemplate = this.helenDialogTemplate;
+
+    if (!helenDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(helenDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
 
   openLeeModal(): void {
     const leeDialogTemplate = this.leeDialogTemplate;
@@ -134,17 +148,4 @@ export class TestimonialsComponent {
     });
   }
 
-  openHelenModal(): void {
-    const helenDialogTemplate = this.helenDialogTemplate;
-
-    if (!helenDialogTemplate) {
-      return;
-    }
-
-    this.dialog.open(helenDialogTemplate, {
-      maxWidth: '900px',
-      width: '90%',
-      autoFocus: false
-    });
-  }
 }

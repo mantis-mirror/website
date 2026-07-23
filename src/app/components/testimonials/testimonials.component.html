@@ -17,6 +17,38 @@
             <div class="testimonials__card">
               <p class="lh-lg">
                 <i class="fas fa-quote-left"></i>
+                With two mirrors I can stay safe and confident regardless of my position on the bike!
+                <i class="fas fa-quote-right"></i>
+                <span class="d-block ratings p-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </p>
+            </div>
+            <!-- client picture  -->
+            <div class="testimonials__picture">
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openHelenModal()"
+                      aria-label="Open Helen H. testimonial">
+                <img src="assets/images/Mantis_Helen_Hills_Testimonial.JPEG" alt="Helen H. testimonial" class="rounded-circle img-fluid" loading="lazy">
+              </button>
+            </div>
+            <!-- client name & role  -->
+            <div class="testimonials__name">
+              <h3>Helen H.</h3>
+              <p class="fw-light">Long-time cyclist</p>
+            </div>
+          </div>
+          <!-- CAROUSEL ITEM 2 -->
+          <div class="carousel-item">
+            <!-- testimonials card  -->
+            <div class="testimonials__card">
+              <p class="lh-lg">
+                <i class="fas fa-quote-left"></i>
                 …very easy to use – it’s one of the best mirrors I’ve ever used.
                 <i class="fas fa-quote-right"></i>
                 <span class="d-block ratings p-1">
@@ -43,7 +75,7 @@
               <p class="fw-light">Recreational Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 2 -->
+          <!-- CAROUSEL ITEM 3 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -75,7 +107,7 @@
               <p class="fw-light">Recreational Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 3 -->
+          <!-- CAROUSEL ITEM 4 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -107,7 +139,7 @@
               <p class="fw-light">Customer</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 4 -->
+          <!-- CAROUSEL ITEM 5 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -139,7 +171,7 @@
               <p class="fw-light">Ottawa triathlete and early Kickstarter backer</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 5 -->
+          <!-- CAROUSEL ITEM 6 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -171,7 +203,7 @@
               <p class="fw-light">Recreational Road Bike Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 6 -->
+          <!-- CAROUSEL ITEM 7 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -203,7 +235,7 @@
               <p class="fw-light">Recreational rider</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 7 -->
+          <!-- CAROUSEL ITEM 8 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -235,7 +267,7 @@
               <p class="fw-light">Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 8 -->
+          <!-- CAROUSEL ITEM 9 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -267,38 +299,6 @@
               <p class="fw-light">Long-time cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 9 -->
-          <div class="carousel-item">
-            <!-- testimonials card  -->
-            <div class="testimonials__card">
-              <p class="lh-lg">
-                <i class="fas fa-quote-left"></i>
-                With two mirrors I can stay safe and confident regardless of my position on the bike!
-                <i class="fas fa-quote-right"></i>
-                <span class="d-block ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </span>
-              </p>
-            </div>
-            <!-- client picture  -->
-            <div class="testimonials__picture">
-              <button type="button"
-                      class="border-0 bg-transparent p-0"
-                      (click)="openHelenModal()"
-                      aria-label="Open Helen H. testimonial">
-                <img src="assets/images/Mantis_Helen_Hills_Testimonial.JPEG" alt="Helen H. testimonial" class="rounded-circle img-fluid" loading="lazy">
-              </button>
-            </div>
-            <!-- client name & role  -->
-            <div class="testimonials__name">
-              <h3>Helen H.</h3>
-              <p class="fw-light">Long-time cyclist</p>
-            </div>
-          </div>
         </div>
         <div class="text-center">
           <button class="btn btn-outline-light fas fa-long-arrow-alt-left me-2"
@@ -315,6 +315,29 @@
       </div>
     </div>
   </div>
+  <ng-template #helenDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">Helen H.</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close Helen H. testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/Mantis_Helen_Hills_Testimonial.JPEG" alt="Helen H. testimonial" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-4">Love my Mantis mirror! I have complete piece of mind riding the roads of the Northern Bruce Peninsula. With two mirrors I can stay safe and confident regardless of my position on the bike!</p>
+          <p class="fw-bold mb-0">— Helen H., Long-time cyclist</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
   <ng-template #leeDialog>
     <div mat-dialog-title class="d-flex justify-content-between align-items-start">
       <h2 class="h5 mb-0">Lee</h2>
@@ -508,29 +531,6 @@
           <p class="mb-4">No mirror can replace good riding habits and shoulder checks, but the Mantis Mirror System has become a valuable part of my safety toolkit. For cyclists who want better rear visibility and greater situational awareness, I believe it's a worthwhile investment and an innovative step forward in bicycle safety.</p>
           <p class="mb-4">Thank you and rubber side down!</p>
           <p class="fw-bold mb-0">— René Demers, Long-time cyclist</p>
-        </div>
-      </div>
-    </mat-dialog-content>
-  </ng-template>
-  <ng-template #helenDialog>
-    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
-      <h2 class="h5 mb-0">Helen H.</h2>
-      <button mat-icon-button
-              mat-dialog-close
-              aria-label="Close Helen H. testimonial"
-              class="p-2">
-        <span class="visually-hidden">Close dialog</span>
-        <i class="fas fa-times" aria-hidden="true"></i>
-      </button>
-    </div>
-    <mat-dialog-content>
-      <div class="row g-4 align-items-center">
-        <div class="col-12 col-md-6">
-          <img src="assets/images/Mantis_Helen_Hills_Testimonial.JPEG" alt="Helen H. testimonial" class="img-fluid rounded">
-        </div>
-        <div class="col-12 col-md-6">
-          <p class="mb-4">Love my Mantis mirror! I have complete piece of mind riding the roads of the Northern Bruce Peninsula. With two mirrors I can stay safe and confident regardless of my position on the bike!</p>
-          <p class="fw-bold mb-0">— Helen H., Long-time cyclist</p>
         </div>
       </div>
     </mat-dialog-content>
