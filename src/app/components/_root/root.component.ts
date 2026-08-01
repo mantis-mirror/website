@@ -15,6 +15,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {DialogComponent} from "../dialog/dialog.component";
 import {SubscribeFormComponent} from "../subscribe-form/subscribe-form.component";
 import {StickyBuyBarComponent} from "../sticky-buy-bar/sticky-buy-bar.component";
+import {EarlySupportersComponent} from "../early-supporters/early-supporters.component";
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,8 @@ import {StickyBuyBarComponent} from "../sticky-buy-bar/sticky-buy-bar.component"
     TheProblemComponent,
     TheSolutionComponent,
     SubscribeFormComponent,
-    StickyBuyBarComponent
+    StickyBuyBarComponent,
+    EarlySupportersComponent
   ],
   templateUrl: './root.component.html',
   styleUrl: './root.component.scss'
