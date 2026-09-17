@@ -1,3 +1,5 @@
+@use '../../../scss/variables' as v;
+
 :host {
   display: block;
 }
@@ -30,6 +32,58 @@
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.sharon-testimonial {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding: clamp(1rem, 2.5vw, 1.4rem);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0.85rem;
+
+  blockquote,
+  p {
+    margin: 0;
+  }
+}
+
+.sharon-testimonial__image {
+  width: 6rem;
+  height: 6rem;
+  border: 0.325rem solid rgba(v.$primary, 0.7);
+  object-fit: cover;
+}
+
+.sharon-testimonial__content {
+  min-width: 0;
+
+  blockquote p {
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.45;
+  }
+}
+
+.sharon-testimonial__attribution {
+  margin-top: 0.7rem !important;
+  font-size: 0.9rem;
+  line-height: 1.35;
+
+  strong,
+  span {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .sharon-testimonial {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 }
 
