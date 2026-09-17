@@ -10,6 +10,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
   styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
+  @ViewChild('sharonDialog') sharonDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('helenDialog') helenDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('leeDialog') leeDialogTemplate?: TemplateRef<unknown>;
   @ViewChild('domDialog') domDialogTemplate?: TemplateRef<unknown>;
@@ -22,6 +23,20 @@ export class TestimonialsComponent {
   @ViewChild('andreDialog') andreDialogTemplate?: TemplateRef<unknown>;
 
   constructor(private readonly dialog: MatDialog) {}
+
+  openSharonModal(): void {
+    const sharonDialogTemplate = this.sharonDialogTemplate;
+
+    if (!sharonDialogTemplate) {
+      return;
+    }
+
+    this.dialog.open(sharonDialogTemplate, {
+      maxWidth: '900px',
+      width: '90%',
+      autoFocus: false
+    });
+  }
 
   openHelenModal(): void {
     const helenDialogTemplate = this.helenDialogTemplate;

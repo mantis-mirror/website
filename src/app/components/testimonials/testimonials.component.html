@@ -17,6 +17,38 @@
             <div class="testimonials__card">
               <p class="lh-lg">
                 <i class="fas fa-quote-left"></i>
+                Overall, I was very impressed with the Mantis and would highly recommend it.
+                <i class="fas fa-quote-right"></i>
+                <span class="d-block ratings p-1">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </p>
+            </div>
+            <!-- client picture  -->
+            <div class="testimonials__picture">
+              <button type="button"
+                      class="border-0 bg-transparent p-0"
+                      (click)="openSharonModal()"
+                      aria-label="Open Sharon Donnelly testimonial">
+                <img src="assets/images/sharon_donnelly.png" alt="Sharon Donnelly, Olympian and Pan Am Games gold medallist" class="rounded-circle img-fluid" loading="lazy">
+              </button>
+            </div>
+            <!-- client name & role  -->
+            <div class="testimonials__name">
+              <h3>Sharon Donnelly</h3>
+              <p class="fw-light">Olympian &amp; Pan Am Games Gold Medallist, Triathlon</p>
+            </div>
+          </div>
+          <!-- CAROUSEL ITEM 2 -->
+          <div class="carousel-item">
+            <!-- testimonials card  -->
+            <div class="testimonials__card">
+              <p class="lh-lg">
+                <i class="fas fa-quote-left"></i>
                 With two mirrors I can stay safe and confident regardless of my position on the bike!
                 <i class="fas fa-quote-right"></i>
                 <span class="d-block ratings p-1">
@@ -43,7 +75,7 @@
               <p class="fw-light">Long-time cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 2 -->
+          <!-- CAROUSEL ITEM 3 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -75,7 +107,7 @@
               <p class="fw-light">Recreational Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 3 -->
+          <!-- CAROUSEL ITEM 4 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -107,7 +139,7 @@
               <p class="fw-light">Recreational Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 4 -->
+          <!-- CAROUSEL ITEM 5 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -139,7 +171,7 @@
               <p class="fw-light">Customer</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 5 -->
+          <!-- CAROUSEL ITEM 6 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -171,7 +203,7 @@
               <p class="fw-light">Ottawa triathlete and early Kickstarter backer</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 6 -->
+          <!-- CAROUSEL ITEM 7 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -203,7 +235,7 @@
               <p class="fw-light">Recreational Road Bike Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 7 -->
+          <!-- CAROUSEL ITEM 8 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -235,7 +267,7 @@
               <p class="fw-light">Recreational rider</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 8 -->
+          <!-- CAROUSEL ITEM 9 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -267,7 +299,7 @@
               <p class="fw-light">Cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 9 -->
+          <!-- CAROUSEL ITEM 10 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -299,7 +331,7 @@
               <p class="fw-light">Long-time cyclist</p>
             </div>
           </div>
-          <!-- CAROUSEL ITEM 10 -->
+          <!-- CAROUSEL ITEM 11 -->
           <div class="carousel-item">
             <!-- testimonials card  -->
             <div class="testimonials__card">
@@ -347,6 +379,31 @@
       </div>
     </div>
   </div>
+  <ng-template #sharonDialog>
+    <div mat-dialog-title class="d-flex justify-content-between align-items-start">
+      <h2 class="h5 mb-0">Sharon Donnelly</h2>
+      <button mat-icon-button
+              mat-dialog-close
+              aria-label="Close Sharon Donnelly testimonial"
+              class="p-2">
+        <span class="visually-hidden">Close dialog</span>
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <mat-dialog-content>
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-md-6">
+          <img src="assets/images/sharon_donnelly.png" alt="Sharon Donnelly, Olympian and Pan Am Games gold medallist" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-3">With all my years of cycling experience, I’ve never really been a fan of bike mirrors, for many of the same reasons other cyclists may have experienced. That said, while I’m no longer competing, I’m still very active on the bike and as I heard about the Mantis Mirror, I decided to give it a try.</p>
+          <p class="mb-3">Most recently, during a multi-day group ride, I found the Mantis excellent for keeping an eye on the other riders. As one of the lead riders, I could quickly see when a gap was opening in the group so we could adjust, regardless of my position on the bike. The mirror views were very clear and stable, and having two mirrors provided a much broader field of view.</p>
+          <p class="mb-4">Overall, I was very impressed with the Mantis and would highly recommend it.</p>
+          <p class="fw-bold mb-0">— Sharon Donnelly, Olympian &amp; Pan Am Games Gold Medallist, Triathlon</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+  </ng-template>
   <ng-template #helenDialog>
     <div mat-dialog-title class="d-flex justify-content-between align-items-start">
       <h2 class="h5 mb-0">Helen H.</h2>
